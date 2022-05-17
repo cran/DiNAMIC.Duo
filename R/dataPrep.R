@@ -5,13 +5,22 @@
 #'   of X correspond to genes and subjects, respectively. X must have gene
 #'   symbols as its row names.
 #' @param Y an optional matrix or data frame of copy number data to compare with
-#'   X. As X, the rows and columns of Y correspond to genes and subjects,
-#'   respectively. Y must have gene symbols as its row names.
+#'   X. As is the case for X, the rows and columns of Y correspond to genes and 
+#'   subjects, respectively. Y must have gene symbols as its row names.
 #' @param species a value specifying species for ensembl database to be used;
 #'   Default is "human".
 #'
 #' @return a list of processed X and Y with a data frame containing gene
 #'   annotation information.
+#'
+#' @details This helper function is designed to prepare input matrices or data frames
+#'   X and Y containing DNA copy number data for analysis. The downstream functions
+#'   that X and Y are indexed by a common set of genes that appear in genomic order.
+#'   In addition, the peelingOne and peelingTwo functions require information about
+#'   the cytoband for each gene, and the resultsProcess function uses information
+#'   about gene position. The dataPrep function queries biomaRt so users are not
+#'   required to provide this information.
+#'
 #'
 #' @examples
 #' \donttest{

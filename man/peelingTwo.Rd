@@ -31,6 +31,17 @@ This function applies a modified version of the peeling algorithm originally des
 (PMID  21183584) to remove a peak from the copy number differences and define a genomic interval of interest
 
 around the peak.
+
+When tumor genomes from two cohorts are compared, there may be multiple regions that harbor
+copy number differences.  For example, gains or losses may be present in only one of the two cohorts,
+and this could give rise to copy number differences.  Alternatively, the same region of the genome
+may exhibit gain or loss in both cohorts.  If the magnitudes of the common gain or loss are distinct,
+then this also gives rise to copy number differences.  The locus that harbors the most extreme difference,
+k, provides a point estimate for the underlying driver gene that gives rise to the difference.  Loci
+near k may also be affected by the underlying difference in copy number.   The peeling procedure for
+two cohorts is applied to "nullify" entries of both X and Y that contribute to the alteration at k,
+thus making it possible to identify other regions of the genome that harbor copy number differences.
+This function is called by \code{\link{peelingTwoIterate}}.
 }
 \examples{
 luad=pD[["X"]]

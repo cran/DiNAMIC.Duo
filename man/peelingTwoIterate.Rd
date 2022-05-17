@@ -45,6 +45,12 @@ This function iteratively applies the peelingTwo function, thereby identifying m
 }
 \details{
 differences across the genome between a two cohorts.  Gains and losses should be analyzed separately.
+
+The \code{\link{peelingTwo}} function applies the peeling procedure for two cohorts to "nullify"
+entries in two copy number matrices X and Y that give rise to the most significant copy number
+difference.  Because tumor genomes may contain multiple regions that harbor copy number differences,
+it is important to apply the peeling procedure for two cohorts iteratively, thereby identifying
+multiple markers and surrounding genomic regions.
 }
 \examples{
 luad=pD[["X"]]

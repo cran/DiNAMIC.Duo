@@ -42,6 +42,11 @@ This function iteratively applies the peelingOne function, thereby identifying m
 }
 \details{
 peaks across the genome in a single cohort.  Gains and losses should be analyzed separately.
+
+The \code{\link{peelingOne}} function applies the peeling algorithm described by
+Walter et al. (Bioinformatics, 2011;27(5):678–685) at a given marker k. Because tumor genomes
+may contain multiple regions of copy number gain or loss, it important to apply the peeling
+process iteratively, thereby identifying multiple markers and surrounding genomic regions.
 }
 \examples{
 lusc=pD[["X"]]

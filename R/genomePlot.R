@@ -28,19 +28,21 @@
 #'
 #' @param labelCex  Point size for the axis label.  Default = 1.  See \code{\link{par}}.
 #'
-#' @param xaxisLine  Numerical value used to specify the location of the x-axis label.  Default = 2.5.  See \code{\link{mtext}}.
+#' @param xaxisLine  Numerical value used to specify the location (line) of the x-axis label.  Default = 2.5.  See \code{\link{mtext}}.
 #'
-#' @param yaxisLine  Numerical value used to specify the location of the y-axis label.  Default = 2.5.  See \code{\link{mtext}}.
+#' @param yaxisLine  Numerical value used to specify the location (line) of the y-axis label.  Default = 2.5.  See \code{\link{mtext}}.
 #'
-#' @param mainLine  Numerical value used to specify the location of the main.label.  Default = 0.  See \code{\link{mtext}}.
+#' @param mainLine  Numerical value used to specify the location (line) of the main.label.  Default = 0.  See \code{\link{mtext}}.
 #'
 #' @param marginVec Numerical vector specifying margin sizes.  Default = c(4, 4, 3, 3).  See \code{\link{par}}.
 #'
 #' @param legendText Character vector used to legend.  Only shown if showLegend = TRUE.  Default = NULL.  See \code{\link{legend}}.
 #'
-#' @param highThreshold Numerical value representing the position of the upper horizontal line.  Default = NULL.
+#' @param highThreshold Numerical value representing the position of the upper horizontal line, e.g., a threshold for
+#'   assessing statistical significance.  Default = NULL.
 #'
-#' @param lowThreshold Numerical value representing the position of the lower horizontal line.  Default = NULL.
+#' @param lowThreshold Numerical value representing the position of the lower horizontal line, e.g., a threshold for
+#'   assessing statistical significance.  Default = NULL.
 #'
 #' @param showLegend Binary value determining whether or not the legend is shown.  Default = FALSE.  See \code{\link{legend}}.
 #'
@@ -53,6 +55,14 @@
 #' @importFrom stats quantile
 #'
 #' @return Creates a genomewide plot of mean copy number values and differences.
+#'
+#' @details This function is used to visualize copy number values and copy number alterations
+#'   across the genome.  If Y = NULL in the input list, then the plot shows a single line
+#'   corresponding to the mean DNA copy number values based on the entries in X.
+#'   If both X and Y are specified, the plot shows three lines corresponding to the mean
+#'   DNA copy number values in X, the mean DNA copy number values in Y, and the difference
+#'   of the mean DNA copy number values.
+#'
 #'
 #' @examples genomeChrPlot(inputList = pD, ylimLow = -1.4, ylimHigh = 1.4)
 #'

@@ -33,7 +33,7 @@ genomeChrPlot(
 \arguments{
 \item{inputList}{A list produced by dataPrep.}
 
-\item{plottingChrs}{A numeric list of chromosomes to be plotted.  One plot for each chromosome.}
+\item{plottingChrs}{A numeric list of chromosomes to be plotted.  A separate plot is produced for each chromosome.}
 
 \item{lwdVec}{A vector of line widths.  Default = rep(1, 3).  See \code{\link{par}}.}
 
@@ -57,31 +57,43 @@ genomeChrPlot(
 
 \item{labelCex}{Point size for the axis label.  Default = 1.  See \code{\link{par}}.}
 
-\item{xaxisLine}{Numerical value used to specify the location of the x-axis label.  Default = 2.5.  See \code{\link{mtext}}.}
+\item{xaxisLine}{Numerical value used to specify the location (line) of the x-axis label.  Default = 2.5.  See \code{\link{mtext}}.}
 
-\item{yaxisLine}{Numerical value used to specify the location of the y-axis label.  Default = 2.5.  See \code{\link{mtext}}.}
+\item{yaxisLine}{Numerical value used to specify the location (line) of the y-axis label.  Default = 2.5.  See \code{\link{mtext}}.}
 
-\item{mainLine}{Numerical value used to specify the location of the main.label.  Default = 0.  See \code{\link{mtext}}.}
+\item{mainLine}{Numerical value used to specify the location (line) of the main.label.  Default = 0.  See \code{\link{mtext}}.}
 
 \item{marginVec}{Numerical vector specifying margin sizes.  Default = c(4, 4, 3, 3).  See \code{\link{par}}.}
 
-\item{legendText}{Character vector used to legend.  Only shown if showLegend = TRUE.  Default = NULL.  See \code{\link{legend}}.}
+\item{legendText}{Character vector used in the legend.  Only shown if showLegend = TRUE.  Default = NULL.  See \code{\link{legend}}.}
 
-\item{highThreshold}{Numerical value representing the position of the upper horizontal line.  Default = NULL.}
+\item{highThreshold}{Numerical value representing the position of the upper horizontal line, e.g., a threshold for
+assessing statistical significance.  Default = NULL.}
 
-\item{lowThreshold}{Numerical value representing the position of the lower horizontal line.  Default = NULL.}
+\item{lowThreshold}{Numerical value representing the position of the lower horizontal line, e.g., a threshold for
+assessing statistical significance.  Default = NULL.}
 
 \item{showLegend}{Binary value determining whether or not the legend is shown.  Default = FALSE.  See \code{\link{legend}}.}
 
 \item{legendXQuantile}{Quantile to specify the "x" location of the legend.  Only relevant if showLegend = TRUE  Default = 0.55.  See \code{\link{legend}}.}
 
-\item{legendYCoord}{Numerical value to specify the "y"location of the legend.  Only relevant if showLegend = TRUE.  Default = 1.  See \code{\link{legend}}.}
+\item{legendYCoord}{Numerical value to specify the "y" location of the legend.  Only relevant if showLegend = TRUE.  Default = 1.  See \code{\link{legend}}.}
 }
 \value{
 Creates a multi-page plot of mean copy number values and differences by chromosome.
 }
 \description{
 This function plots mean copy number values from one or two cohorts at a common set of markers across multiple chromosomes.
+}
+\details{
+Although \code{\link{genomePlot}} can be used to visualize copy number values and
+copy number alterations across the genome, the scale makes it difficult to see events
+that affect small genomic regions.  These events are easier to see if the viewing window
+is restricted to individual chromosomes, as is done here.  If Y = NULL in the input list,
+then the plot shows a single line corresponding to the mean DNA copy number values based
+on the entries in X.  If both X and Y are specified, the plot shows three lines corresponding
+to the mean DNA copy number values in X, the mean DNA copy number values in Y, and the
+difference of the mean DNA copy number values.
 }
 \examples{
 genomeChrPlot(inputList = pD, ylimLow = -1.4, ylimHigh = 1.4)

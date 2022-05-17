@@ -25,6 +25,11 @@
 #' @return A list containing two elements: X and interval.  X is an updated version of the input
 #' copy number matrix in which the peak at k has been removed, and interval is genomic region
 #' containing k.  By construction, interval cannot extend beyond the chromosome arm containing k.
+#'
+#' @details The \code{\link{peelingOne}} function applies the peeling algorithm described by 
+#'   Walter et al. (Bioinformatics, 2011;27(5):678–685) at a given marker k. Because tumor genomes
+#'   may contain multiple regions of copy number gain or loss, it important to apply the peeling
+#'   process iteratively, thereby identifying multiple markers and surrounding genomic regions.
 #' 
 #' @examples lusc=pD[["X"]]
 #'

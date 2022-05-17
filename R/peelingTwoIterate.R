@@ -27,6 +27,12 @@
 #' @return A list containing two elements: X, Y, and interval.  X and Y are updated versions of the input
 #' copy number matrices in which the peak difference at k has been removed, and interval is genomic region
 #' containing k.  By construction, interval cannot extend beyond the chromosome arm containing k.
+#'
+#' @details The \code{\link{peelingTwo}} function applies the peeling procedure for two cohorts to "nullify"
+#'   entries in two copy number matrices X and Y that give rise to the most significant copy number
+#'   difference.  Because tumor genomes may contain multiple regions that harbor copy number differences,
+#'   it is important to apply the peeling procedure for two cohorts iteratively, thereby identifying
+#'   multiple markers and surrounding genomic regions.
 #' 
 #' @examples luad=pD[["X"]]
 #'

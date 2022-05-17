@@ -1,6 +1,6 @@
 #' A Function to Apply the Peeling Algorithm in a Single Copy Number Matrix
 #'
-#' This function applies the peeling algorithm, as described in Walter et al. (PMID  21183584),
+#' This function applies the peeling algorithm described in Walter et al. (Bioinformatics, 2011;27(5):678–685)
 #'
 #' to remove a peak from a copy number data set and define a genomic interval of interest around
 #'
@@ -19,6 +19,14 @@
 #' @return A list containing two elements: X and interval.  X is an updated version of the input
 #' copy number matrix in which the peak at k has been removed, and interval is genomic region
 #' containing k.  By construction, interval cannot extend beyond the chromosome arm containing k.
+#'
+#' @details Tumor genomes often contain multiple DNA copy number alterations, e.g., amplifications
+#'   or deletions. The locus that harbors the most extreme alteration, k, as evidenced by the maximum
+#'   or minimum column mean, provides a point estimate for the location of an underlying driver gene. 
+#'   Also, loci near k may be affected by the same underlying genomic event. The peeling procedure is
+#'   applied to "nullify" entries in X that contribute to the alteration at k, thus making it possible
+#'   to identify altered regions elsewhere in the genome. This function is called by 
+#'   \code{\link{peelingOneIterate}}.
 #' 
 #' @examples lusc=pD[["X"]]
 #'

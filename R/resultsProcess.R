@@ -8,6 +8,16 @@
 #' @return processed peeling results with a list of genes corresponding to each
 #'   peeled region
 #'
+#' @details The \code{\link{peelingOneIterate}} function identifies (i) multiple loci across the genome
+#'   where copy number gains are losses, and (ii) regions around those loci that also exhibit copy number
+#'   changes.  Similarly, \code{\link{peelingTwoIterate}} identifies loci and surrounding regions that
+#'   harbor copy number differences.  The output of either \code{\link{peelingOneIterate}} or
+#'   \code{\link{peelingTwoIterate}} is processed to produce a tab-delimited text file that provides
+#'   a summary of the peeling results.  Each column corresponds to a peeled locus, and the column contains
+#'   the genomic location of the locus, the start and end positions of the surrounding peeled region,
+#'   the mean copy number value (one matrix X) or difference of mean copy number values (two matrices X and Y),
+#'   the cyclic shift-based p-value, and the names of the genes in the peeled region (in alphabetical order).
+#'
 #' @seealso \code{\link{dataPrep}}
 #'
 #' @import plyr

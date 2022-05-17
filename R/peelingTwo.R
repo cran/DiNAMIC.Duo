@@ -21,6 +21,17 @@
 #' @return A list containing three elements: X, Y, and interval.  X and Y are updated versions of the
 #' input copy number matrices X and Y in which the peak at k has been removed, and interval is genomic region
 #' containing k.  By construction, interval cannot extend beyond the chromosome arm containing k.
+#'
+#' @details When tumor genomes from two cohorts are compared, there may be multiple regions that harbor
+#'   copy number differences.  For example, gains or losses may be present in only one of the two cohorts,
+#'   and this could give rise to copy number differences.  Alternatively, the same region of the genome
+#'   may exhibit gain or loss in both cohorts.  If the magnitudes of the common gain or loss are distinct,
+#'   then this also gives rise to copy number differences.  The locus that harbors the most extreme difference,
+#'   k, provides a point estimate for the underlying driver gene that gives rise to the difference.  Loci
+#'   near k may also be affected by the underlying difference in copy number.   The peeling procedure for
+#'   two cohorts is applied to "nullify" entries of both X and Y that contribute to the alteration at k,
+#'   thus making it possible to identify other regions of the genome that harbor copy number differences.
+#'   This function is called by \code{\link{peelingTwoIterate}}.
 #' 
 #' @examples luad=pD[["X"]]
 #'
