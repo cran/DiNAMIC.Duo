@@ -1,6 +1,6 @@
 Package: DiNAMIC.Duo
 Title: Finding Recurrent DNA Copy Number Alterations and Differences
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person(given = "Vonn",
            family = "Walter",
@@ -36,19 +36,20 @@ Description: In tumor tissue, underlying genomic instability can lead to DNA cop
 	Additional functionality is provided to perform downstream analyses, including the creation of
 	summary files and graphics. DiNAMIC.Duo builds upon the original DiNAMIC package of Walter et al.
 	(2011) <doi:10.1093/bioinformatics/btq717> and leverages the theory developed in Walter et al.
-	(2015) <doi:10.1093/biomet/asv046>. A manuscript based on DiNAMIC.Duo is currently under development.
-Config/reticulate: list( packages = list( list(package = "numpy") ) )
+	(2015) <doi:10.1093/biomet/asv046>. An article describing DiNAMIC.Duo by Walter et al. (2022)
+	can be found at <doi: 10.1093/bioinformatics/btac542>.
 Depends: R (>= 3.5.0)
 VignetteBuilder: R.rsp
 Suggests: R.rsp
 biocViews: biomaRt
-Imports: biomaRt, dinamic, plyr, reticulate
+Imports: biomaRt, dinamic, plyr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
+SystemRequirements: Python, NumPy Python library
 NeedsCompilation: no
-Packaged: 2022-05-17 16:19:56 UTC; vwalter1
+Packaged: 2023-03-02 15:03:17 UTC; vwalter1
 Author: Vonn Walter [aut, cre] (<https://orcid.org/0000-0001-6114-6714>),
   Hyo Young Choi [aut] (<https://orcid.org/0000-0002-7627-8493>),
   Xiaobei Zhao [aut] (<https://orcid.org/0000-0002-5277-0846>),
@@ -56,4 +57,4 @@ Author: Vonn Walter [aut, cre] (<https://orcid.org/0000-0001-6114-6714>),
   David Neil Hayes [aut] (<https://orcid.org/0000-0001-6203-7771>)
 Maintainer: Vonn Walter <vwalter1@pennstatehealth.psu.edu>
 Repository: CRAN
-Date/Publication: 2022-05-17 17:30:02 UTC
+Date/Publication: 2023-03-02 15:40:02 UTC

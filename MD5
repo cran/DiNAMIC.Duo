@@ -1,6 +1,6 @@
-442b21307f8e2c709fafda76a356b57c *DESCRIPTION
+0fd5b4bbcde8c3be1d282fec14993939 *DESCRIPTION
 de7b05428fc7e20df847177b44dda49d *NAMESPACE
-e4597209286d4dfd2d1e51a0de0f71ad *NEWS.md
+6226f1c9bcc188b8d3c00022a12a7597 *NEWS.md
 0ffa2f2cd7c5ac99a242fe5dac7216da *R/cyclicNullR.R
 8f32eb7697a08227b9b381ac4ce36fbc *R/cyclicShiftColR.R
 d68aac1e84a4d04fb97c3433cfdbc31d *R/dataPrep.R
@@ -8,7 +8,6 @@ fbe74acb3b8d975cb1788e9fd0a540d4 *R/genomeChrPlot.R
 8ba93995d0227c9b06d34ad9ea25bf67 *R/genomePlot.R
 32e74c79e6910288d7929083e2c8952c *R/luadSubset.R
 f534d603591bd3f4a7684767490570c0 *R/luscSubset.R
-264bcb57794e8ceeb562cbe19a838268 *R/onAttach.R
 56b45818aa89469e66b7e263e0437be6 *R/pD.R
 41446b03860225721a64108c9841ab62 *R/peelingOne.R
 7cbbbb70f049d86bc917834cda69b72b *R/peelingOneIterate.R
@@ -16,9 +15,9 @@ d1162df5e86ac75a4ee265de73a1cf83 *R/peelingTwo.R
 379129a4c4778a0b7f2151d71ae5da0b *R/peelingTwoIterate.R
 6048bd5029e84a246306e1954d3bd167 *R/resultsProcess.R
 adfd7db43eafcc0d1ef57988026033b7 *README.md
-95ed06d0280bdec9b2a29edf85606792 *build/vignette.rds
+cab81b0d450067c179421bc6b0e15fee *build/vignette.rds
 b80ebeb7950a25e1c0a80186fcf48364 *data/DiNAMIC.Duo.RData
-ed4b2df285d5ea26b307e4485ee8129d *inst/doc/DiNAMICDuo_vignette.pdf
+71309f9f52b9d9017af11fe95ee576f0 *inst/doc/DiNAMICDuo_vignette.pdf
 eb07ec677350c8961c63fa421a32c20b *inst/doc/DiNAMICDuo_vignette.pdf.asis
 50a8e896cae6c62ad0596773a372c63a *inst/python/cyclicShiftCol.py
 a581a4f5c09e1d52344e98cc2cc5b6af *man/cyclicNullR.Rd
@@ -28,7 +27,6 @@ ffd4e6f415e3f8a12a61fa90cd31e987 *man/dataPrep.Rd
 9dd4c6c76054a094ab0e560c589b27d9 *man/genomePlot.Rd
 d04777d7c4a815473d5bb84b17cdfc8a *man/luadSubset.Rd
 f9f0b27d4f21ecfd4ffca6be46d1bdc7 *man/luscSubset.Rd
-086773864adc7478093ed095055fe7d8 *man/miniconda_installation.Rd
 3fc58602dcd312aba557182d299be64d *man/pD.Rd
 62e02129418084834ba41481143c76df *man/peelingOne.Rd
 9927351a801490abc8a208f000f32747 *man/peelingOneIterate.Rd

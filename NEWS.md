@@ -1,3 +1,22 @@
+# DiNAMIC.Duo 1.0.2
+
+* DiNAMIC.Duo 1.0.2 submitted to CRAN on March XX, 2023
+
+## Minor changes
+
+* The DESCRIPTION file was updated to include SystemRequirements that were not 
+required in earlier versions of the package.  Also, the citation for the DiNAMIC.Duo
+manuscript was added.
+
+* The onAttach() function was removed.  Previously, there was an interactive session
+at start-up during which users were asked whether Miniconda was installed.  If not, they 
+were prompted to install it.  This has been deprecated.  Now the "Python and NumPy" subsection
+of the vignette tells users how to use the reticulate R package to install Miniconda and
+NumPy.
+
+* The vignette was updated and now includes R code to install Miniconda and NumPy using
+the reticulate R package.
+
 # DiNAMIC.Duo 1.0.1
 
 * DiNAMIC.Duo 1.0.1 submitted to CRAN on May 17, 2022
