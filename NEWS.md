@@ -1,6 +1,15 @@
+# DiNAMIC.Duo 1.0.3
+
+* DiNAMIC.Duo 1.0.3 submitted to CRAN on April 4, 2025
+
+## Bug fixes
+
+* The dataPrep() function was updated in order to fail gracefully if an
+Ensembl Archive is not available.
+
 # DiNAMIC.Duo 1.0.2
 
-* DiNAMIC.Duo 1.0.2 submitted to CRAN on March XX, 2023
+* DiNAMIC.Duo 1.0.2 submitted to CRAN on March 10, 2023
 
 ## Minor changes
 
