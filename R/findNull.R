@@ -15,7 +15,7 @@
 #'   correlation of the markers.  This function uses \code{num.perms} cyclic shifts of the copy number matrix 
 #'   \code{x} to create an approximate null distribution for \code{max(colSums(x))} or \code{min(colSums(x))}.  
 #'   The statistical significance of the observed value of \code{max(colSums(x))} or \code{min(colSums(x))} 
-#'   is assessed by the functions \code{\link{quickLook}} and \code{\link{detailedLook}}.
+#'   is assessed by the functions \code{\link[dinamic]{quickLook}} and \code{\link[dinamic]{detailedLook}}.
 #'
 #'
 #' @examples

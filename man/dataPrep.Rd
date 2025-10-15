@@ -8,7 +8,7 @@ dataPrep(
   X,
   Y = NULL,
   species = c("human", "mouse"),
-  ensemblHost = "http://aug2020.archive.ensembl.org"
+  ensemblHost = "https://aug2020.archive.ensembl.org"
 )
 }
 \arguments{
@@ -20,11 +20,11 @@ symbols as its row names.}
 X. As is the case for X, the rows and columns of Y correspond to genes and
 subjects, respectively. Y must have gene symbols as its row names.}
 
-\item{species}{a value specifying species for Ensembl database to be used;
+\item{species}{a value specifying species for ensembl database to be used;
 Default is "human".}
 
-\item{ensemblHost}{an Ensembl Archive that is used to access the Ensembl
-database; Default is "http://aug2020.archive.ensembl.org".}
+\item{ensemblHost}{specifies the Ensembl archive used;
+Default is "http://aug2020.archive.ensembl.org".}
 }
 \value{
 a list of processed X and Y with a data frame containing gene

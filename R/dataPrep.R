@@ -9,6 +9,8 @@
 #'   subjects, respectively. Y must have gene symbols as its row names.
 #' @param species a value specifying species for ensembl database to be used;
 #'   Default is "human".
+#' @param ensemblHost specifies the Ensembl archive used;
+#'   Default is "https://aug2020.archive.ensembl.org".
 #'
 #' @return a list of processed X and Y with a data frame containing gene
 #'   annotation information.
@@ -30,15 +32,18 @@
 #' }
 #'
 #' @import biomaRt
-#' @import curl
+#' @import httr
 #' @export
-dataPrep = function(X, Y=NULL, species=c("human","mouse"), ensemblHost="http://aug2020.archive.ensembl.org")
+dataPrep = function(X, Y=NULL, species=c("human","mouse"), ensemblHost="https://aug2020.archive.ensembl.org")
 	{
-	#Check connection to host
- 	statusCode = curl::curl_fetch_memory(ensemblHost)$status_code
-	if (statusCode != 200)
-		{
-		stop(paste(ensemblHost, "currently not available"))
+	#Check connection to ensemblHost with ten second timeout
+ 	response = tryCatch(
+		httr::GET(ensemblHost, timeout(10)),
+		error = function(e) return(NULL)
+		)
+
+	if (is.null(response)){
+		print(paste(c(ensemblHost, " is not reachable (timeout or network error)")))
 		}
 
   	species = match.arg(species,c("human","mouse"))
